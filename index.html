@@ -31,14 +31,196 @@
                     aria-selected="false">Bài 4</button>
             </div>
             <div class="tab-content border border-black" id="v-pills-tabContent">
+                <!-- Bài 1 -->
                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                    aria-labelledby="v-pills-home-tab" tabindex="0">...</div>
+                    aria-labelledby="v-pills-home-tab" tabindex="0">
+                    <div class="content">
+                        <h1>Quản lý tuyển sinh</h1>
+                        <div class="hint">
+                            <h3>💡Gợi ý</h3>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Mở rộng để xem thêm
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Điểm chuẩn của hội đồng tự nhập thêm. Điểm chuẩn của 3 môn thường
+                                                    tối đa 30đ. Nên có thể lấy các điểm chuẩn 30, 29, 25</li>
+                                                <li>Ô nhập khu vực, đối tượng có thể tạo bằng input, dropdown hoặc
+                                                    radio.<br>Nếu không thuộc khu vực hoặc đối tượng trong danh sách thì
+                                                    điểm khu vực và điểm đối tượng sẽ là 0</li>
+                                                <li>Nếu có 1 trong 3 môn bị điểm 0 thì lặp tức cho rớt không cần kiểm
+                                                    tra tổng điểm có lớn hơn hoặc bằng điểm chuẩn hay không.</li>
+                                                <li>Khu vực A, B, C điểm cộng lần lượt: 2, 1, 0.5</li>
+                                                <li>Đối tượng 1, 2, 3 điểm cộng lần lượt: 2.5, 1.5, 1</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-area">
+                            <input type="number" class=" form-control" placeholder="Điểm chuẩn khối A">
+                            <select class="form-select" name="" id="">
+                                <option value="">Chọn khu vực</option>
+                                <option value="">A</option>
+                                <option value="">B</option>
+                                <option value="">C</option>
+                            </select>
+                            <select name="" id="" class="form-select">
+                                <option value="">Chọn đối tượng</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                            <input type="number" class=" form-control" placeholder="Điểm Toán">
+                            <input type="number" class=" form-control" placeholder="Điểm Lý">
+                            <input type="number" class=" form-control" placeholder="Điểm Hóa">
+                        </div>
+                        <button class="btn btn-primary">Kết quả</button>
+                        <div class="alert alert-success"></div>
+                    </div>
+                </div>
+                <!-- Bài 2 -->
                 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
-                    tabindex="0">...</div>
+                    tabindex="0">
+                    <div class="content">
+                        <h1>Tính tiền điện</h1>
+                        <div class="hint">
+                            <h3>Gợi ý</h3>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Mở rộng để xem thêm
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>Cách tính tiền điện gần giống với bài tính tiền Grab trên lớp</p>
+                                            <img src="/Bai2.JPG">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-area">
+                            <input type="text" class=" form-control" placeholder="Nhập họ tên">
+                            <input type="number" class=" form-control" placeholder="Nhập số kw">
+                        </div>
+                        <button class="btn btn-primary">Tính tiền điện</button>
+                        <div class="alert alert-success"></div>
+                    </div>
+                </div>
+                <!-- Bài 3 -->
                 <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
-                    tabindex="0">...</div>
+                    tabindex="0">
+                    <div class="content">
+                        <h1>Tính thuế thu nhập cá nhân</h1>
+                        <div class="hint">
+                            <h3>Gợi ý</h3>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Mở rộng để xem thêm
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Tổng thu nhập năm <strong>tự nhập thêm</strong>. Giả sử 1 tháng thu
+                                                    nhập 10tr thì 1 năm 120tr => Nhập 120000000</li>
+                                                <li>Demo hiện tại đang tính % thuế theo điều kiện mà thu nhập chịu thuế
+                                                    rơi vào. Vd: thu nhập chịu thuế là 110tr thì tính 10% của 110tr = >
+                                                    110tr * 0.1</li>
+                                                <li>Do đề không ghi rõ yêu cầu tính thuế nên cũng có thể tính theo cách
+                                                    chia ra từng đoạn thuế giống bài tính tiền Grab. Vd: 110tr =>
+                                                    60tr*0.05 + (110tr-60tr)*0.1</li>
+                                                <li>Sử dụng input có type number thì khi nhập 120000000, có thể nhập
+                                                    ngắn gọn thành 120e+6</li>
+                                                <li>Đối với các con số hàng triệu có nhiều số 0, có thể viết ngắn gọn
+                                                    trong code như sau:<br>4tr => 4000000 => 4e+6</li>
+                                                <li>Dùng <a
+                                                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat"
+                                                        target="_blank">NumberFormat</a> để số tiền hiển thị đẹp hơn
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-area">
+                            <input type="text" class=" form-control" placeholder="Nhập họ tên">
+                            <input type="number" class=" form-control" placeholder="Tổng thu nhập năm">
+                            <input type="number" class=" form-control" placeholder="Số người phụ thuộc">
+                        </div>
+                        <button class="btn btn-primary">Tính tiền thuế</button>
+                        <div class="alert alert-success"></div>
+                    </div>
+                </div>
+                <!-- Bài 4 -->
                 <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"
-                    tabindex="0">...</div>
+                    tabindex="0">
+                    <div class="content">
+                        <h1>Tính tiền cáp</h1>
+                        <div class="hint">
+                            <h3>Gợi ý</h3>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Mở rộng để xem thêm
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Sử dụng event onchange của dropdown để xử lý ẩn hiện cho ô nhập số
+                                                    kết nối khi chọn loại khách hàng <a
+                                                        href="https://www.w3schools.com/jsref/event_onchange.asp"
+                                                        target="_blank">Onchange</a></li>
+                                                <li>Đối với loại khách hàng Doanh nghiệp, tổng 10 kết nối đầu là
+                                                    75$<br>=> Đây là giá trọn gói, nếu doanh nghiệp lắp đặt số kết nối
+                                                    nhỏ hơn 10 thì vẫn phải đóng 75$<br>Vd: 6 kết nối thì vẫn sẽ cộng
+                                                    75$ vào tổng tiền.<br>=> Nếu lắp trên 10 kết nối thì kết nối thứ 11
+                                                    trở đi sẽ tính 5$/kết nối.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-area">
+                            <select name="" id="" class="form-select">
+                                <option value="">Chọn loại khách hàng</option>
+                                <option value="">Nhà dân</option>
+                                <option value="">Doanh nghiệp</option>
+                            </select>
+                            <input type="number" class=" form-control" placeholder="Nhập mã khách hàng">
+                            <input type="number" class=" form-control" placeholder="Số kênh cao cấp">
+                        </div>
+                        <button class="btn btn-primary">Tính tiền cáp</button>
+                        <div class="alert alert-success"></div>
+                    </div>
+                </div>
             </div>
         </div>
 
