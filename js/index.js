@@ -49,18 +49,29 @@ document.querySelector('#quanLyTuyenSinh').onsubmit = function (event) {
                     }
 
                 } else {
-                    ketQua = `Thất bại do có điểm <strong.>0</strong.`;
+                    ketQua = `Thất bại do có điểm <strong>0</strong>.`;
                     break;
                 }
             }
         }
-
-
-
-
         document.querySelector('#ketQua1').innerHTML = ketQua;
-
     } else {
         document.querySelector('#ketQua1').innerHTML = `Điểm chuẩn không hợp lệ !`;
     }
+}
+//------- Bài 2 ------------------
+document.querySelector('#tinhTienDien').onsubmit = function (event) {
+    event.preventDefault();
+    let name = this.querySelector('#hoTen').value;
+
+    const arrHeSo = [500, 650, 850, 1100, 1300];
+    
+    let suDung = +document.querySelector('#soKw').value;
+    console.log(suDung);
+
+    let arrMoc = [50, 100, 200, 350];
+    for (value of arrMoc) {
+        
+    }
+
 }

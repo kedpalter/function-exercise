@@ -110,17 +110,24 @@
                                         <div class="accordion-body">
                                             <p>Cách tính tiền điện gần giống với bài tính tiền Grab trên lớp</p>
                                             <img src="/Bai2.JPG">
+                                            <ul>
+                                                <li>50kw đầu: 500đ/kw</li>
+                                                <li>50kw kế: 650đ/kw</li>
+                                                <li>100kw kế: 850đ/kw</li>
+                                                <li>150kw kế: 1100đ/kw</li>
+                                                <li>Còn lại: 1300đ/kw</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="input-area">
-                            <input type="text" class=" form-control" placeholder="Nhập họ tên">
-                            <input type="number" class=" form-control" placeholder="Nhập số kw">
-                        </div>
-                        <button class="btn btn-primary">Tính tiền điện</button>
-                        <div class="alert alert-success"></div>
+                        <form class="input-area" id="tinhTienDien">
+                            <input type="text" class="form-control bai2-input" id="hoTen" placeholder="Nhập họ tên">
+                            <input type="number" class="form-control bai2-input" id="soKw" placeholder="Nhập số kw">
+                            <button class="btn btn-primary" type="submit">Tính tiền điện</button>
+                        </form>
+                        <div class="alert alert-success" id="ketQua2"></div>
                     </div>
                 </div>
                 <!-- Bài 3 -->
