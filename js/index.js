@@ -60,18 +60,41 @@ document.querySelector('#quanLyTuyenSinh').onsubmit = function (event) {
     }
 }
 //------- Bài 2 ------------------
+
+let tinhTienDien = function (input) {
+    const arrHeSo = [500, 650, 850, 1100, 1300];
+    let arrChenhLech = [50, 50, 100, 150];
+    let arrMoc = [50, 100, 200, 350];
+    let money = 0;
+
+    for (index in arrMoc) {
+        if (input > arrMoc[index]) {
+            console.log(index);
+            money += arrChenhLech[index] * arrHeSo[index];
+            console.log(money);
+        } else {
+            console.log(index);
+            money += (input - arrMoc[index - 1]) * arrHeSo[index];
+            break;
+        }
+    }
+    if (input > 350) {
+        console.log(true);
+        money += (input - 350) * 1300;
+        console.log(money);
+    }
+    return money;
+}
+console.log(tinhTienDien(351));
+
 document.querySelector('#tinhTienDien').onsubmit = function (event) {
     event.preventDefault();
     let name = this.querySelector('#hoTen').value;
 
-    const arrHeSo = [500, 650, 850, 1100, 1300];
-    
     let suDung = +document.querySelector('#soKw').value;
     console.log(suDung);
+    // Tính số tiền
+    let soTien = tinhTienDien(suDung);
 
-    let arrMoc = [50, 100, 200, 350];
-    for (value of arrMoc) {
-        
-    }
-
+    document.querySelector('#ketQua2').innerHTML = `Tên: <strong>${name}</strong> - Tiền điện: <strong>${soTien}</strong>.`;
 }
