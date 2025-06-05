@@ -66,26 +66,27 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="input-area">
-                            <input type="number" class=" form-control" placeholder="Điểm chuẩn khối A">
-                            <select class="form-select" name="" id="">
-                                <option value="">Chọn khu vực</option>
-                                <option value="">A</option>
-                                <option value="">B</option>
-                                <option value="">C</option>
+                        <form class="input-area" id="quanLyTuyenSinh">
+                            <input type="number" class=" form-control" placeholder="Điểm chuẩn khối A" id="diemChuan">
+                            <select class="bai1-input form-select" name="" id="">
+                                <option value="0">Chọn khu vực</option>
+                                <option value="2">A</option>
+                                <option value="1">B</option>
+                                <option value="0.5">C</option>
                             </select>
-                            <select name="" id="" class="form-select">
-                                <option value="">Chọn đối tượng</option>
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
+                            <select name="" id="" class="bai1-input form-select">
+                                <option value="0">Chọn đối tượng</option>
+                                <option value="2.5">1</option>
+                                <option value="1.5">2</option>
+                                <option value="1">3</option>
                             </select>
-                            <input type="number" class=" form-control" placeholder="Điểm Toán">
-                            <input type="number" class=" form-control" placeholder="Điểm Lý">
-                            <input type="number" class=" form-control" placeholder="Điểm Hóa">
-                        </div>
-                        <button class="btn btn-primary">Kết quả</button>
-                        <div class="alert alert-success"></div>
+                            <input type="number" class="bai1-input form-control" placeholder="Điểm Toán">
+                            <input type="number" class="bai1-input form-control" placeholder="Điểm Lý">
+                            <input type="number" class="bai1-input form-control" placeholder="Điểm Hóa">
+                            <button class="btn btn-primary" id="btnTinhDiem" type="submit">Kết quả</button>
+                        </form>
+
+                        <div class="alert alert-success" id="ketQua1"></div>
                     </div>
                 </div>
                 <!-- Bài 2 -->
