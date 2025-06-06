@@ -166,19 +166,21 @@
                                                         href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat"
                                                         target="_blank">NumberFormat</a> để số tiền hiển thị đẹp hơn
                                                 </li>
+                                                <li>Với mỗi người phụ thuộc, được giảm 160k</li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="input-area">
-                            <input type="text" class=" form-control" placeholder="Nhập họ tên">
-                            <input type="number" class=" form-control" placeholder="Tổng thu nhập năm">
-                            <input type="number" class=" form-control" placeholder="Số người phụ thuộc">
-                        </div>
-                        <button class="btn btn-primary">Tính tiền thuế</button>
-                        <div class="alert alert-success"></div>
+                        <form class="input-area" id="tinhTienThue">
+                            <input type="text" class=" form-control" id="caNhan" placeholder="Nhập họ tên">
+                            <input type="number" class="form-control" id="thuNhap" placeholder="Tổng thu nhập năm">
+                            <input type="number" class="form-control" id="phuThuoc" placeholder="Số người phụ thuộc">
+                            <button class="btn btn-primary" type="submit">Tính tiền thuế</button>
+                        </form>
+
+                        <div class="alert alert-success" id="ketQua3"></div>
                     </div>
                 </div>
                 <!-- Bài 4 -->
@@ -216,17 +218,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="input-area">
-                            <select name="" id="" class="form-select">
-                                <option value="">Chọn loại khách hàng</option>
-                                <option value="">Nhà dân</option>
-                                <option value="">Doanh nghiệp</option>
+                        <form class="input-area" id="tinhTienCap">
+                            <select name="" id="loaiKH" class="form-select" onchange="themKetNoi()">
+                                <option value="0">Chọn loại khách hàng</option>
+                                <option value="1">Nhà dân</option>
+                                <option value="2">Doanh nghiệp</option>
                             </select>
-                            <input type="number" class=" form-control" placeholder="Nhập mã khách hàng">
-                            <input type="number" class=" form-control" placeholder="Số kênh cao cấp">
-                        </div>
-                        <button class="btn btn-primary">Tính tiền cáp</button>
-                        <div class="alert alert-success"></div>
+                            <input type="text" class=" form-control" id="maKH" placeholder="Nhập mã khách hàng">
+                            <input type="number" class=" form-control" id="kenhCaoCap" placeholder="Số kênh cao cấp">
+                            <input type="number" class="form-control d-none" id="soKetNoi" placeholder="Số kết nối">
+                            <button class="btn btn-primary" type="submit">Tính tiền cáp</button>
+                        </form>
+
+                        <div class="alert alert-success" id="ketQua4"></div>
                     </div>
                 </div>
             </div>
