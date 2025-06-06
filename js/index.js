@@ -20,12 +20,8 @@ document.querySelector('#quanLyTuyenSinh').onsubmit = function (event) {
 
         for (let i of arrInput) {
             if (i.tagName == "SELECT") {
-                console.log(true);
                 arrInfo.push(+i.value); // Mặc định thêm value của select vào chuỗi
             } else if (i.tagName == "INPUT") {
-
-
-
                 if (+i.value > 0 && +i.value <= 10) {     // Kiểm tra số 0 trong chuỗi các input
                     arrInfo.push(+i.value);
 
@@ -51,26 +47,18 @@ document.querySelector('#quanLyTuyenSinh').onsubmit = function (event) {
 //------- Bài 2 ------------------
 
 let tinhTienDien = function (input) {
-    const arrHeSo = [500, 650, 850, 1100, 1300];
-    let arrChenhLech = [50, 50, 100, 150];
-    let arrMoc = [50, 100, 200, 350];
+    const arrHeSo = [0, 500, 650, 850, 1100, 1300];
+    let arrChenhLech = [0, 50, 50, 100, 150];
+    let arrMoc = [0, 50, 100, 200, 350, Infinity];
     let money = 0;
 
     for (index in arrMoc) {
         if (input > arrMoc[index]) {
-            console.log(index);
             money += arrChenhLech[index] * arrHeSo[index];
-            console.log(money);
         } else {
-            console.log(index);
             money += (input - arrMoc[index - 1]) * arrHeSo[index];
             break;
         }
-    }
-    if (input > 350) {
-        console.log(true);
-        money += (input - 350) * 1300;
-        console.log(money);
     }
     return money;
 }
@@ -84,7 +72,7 @@ document.querySelector('#tinhTienDien').onsubmit = function (event) {
     // Tính số tiền
     let soTien = tinhTienDien(suDung);
 
-    document.querySelector('#ketQua2').innerHTML = `Tên: <strong>${name}</strong> - Tiền điện: <strong>${soTien}</strong>.`;
+    document.querySelector('#ketQua2').innerHTML = `Tên: <strong>${name}</strong> - Tiền điện: <strong>${soTien.toLocaleString('vi-VN')}</strong>.`;
 }
 
 // ----------- Bài 3 --------------------
@@ -104,7 +92,7 @@ document.querySelector('#tinhTienThue').onsubmit = function (event) {
     if (thuNhap > 4000000) {
         // Tính thuế
         let tienThue = tinhThue(thuNhap, phuThuoc);
-        ketQua3 = `Tên: <strong>${thongTin}</strong>, Tiền thuế cá nhân: <strong>${tienThue}</strong>.`
+        ketQua3 = `Tên: <strong>${thongTin}</strong>, Tiền thuế cá nhân: <strong>${Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }).format(tienThue,)}</strong>.`
     } else {
         ketQua3 = 'Thông tin nhập chưa đúng.'
     }
@@ -116,11 +104,10 @@ document.querySelector('#tinhTienThue').onsubmit = function (event) {
 // Function Onchange
 let themKetNoi = function () {
     let loaiKH = +document.querySelector('#loaiKH').value;
-    console.log(loaiKH);
     if (loaiKH == 2) {
-        document.querySelector('#soKetNoi').className = 'form-control';
+        document.querySelector('#soKetNoi').className = 'form-control w-25 d-inline-block mx-3 mb-3';
     } else {
-        document.querySelector('#soKetNoi').className = 'form-control d-none';
+        document.querySelector('#soKetNoi').className = 'd-none';
     }
 }
 
@@ -151,10 +138,6 @@ document.querySelector('#tinhTienCap').onsubmit = function (event) {
     let kenhCaoCap = +document.querySelector('#kenhCaoCap').value;
     let ketNoi = +document.querySelector('#soKetNoi').value;
 
-    console.log(loaiKH);
-    console.log(kenhCaoCap);
-
-
     switch (loaiKH) {
         case 1: {
             soTien += tinhTienCap(kenhCaoCap, 0);
@@ -169,5 +152,5 @@ document.querySelector('#tinhTienCap').onsubmit = function (event) {
         }
     }
 
-    document.querySelector('#ketQua4').innerHTML = `Mã khách hàng: <strong>${maKH}</strong> - Tiền cáp: <strong>${soTien}</strong>.`;
+    document.querySelector('#ketQua4').innerHTML = `👉 Mã khách hàng: <strong>${maKH}</strong> - Tiền cáp: <strong>${Intl.NumberFormat("us-US", { style: "currency", currency: "USD" }).format(soTien)}</strong>.`;
 }

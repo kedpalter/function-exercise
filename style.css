@@ -1,0 +1,44 @@
+.container {
+    background-color: #ECF0F3;
+}
+
+.container .nav {
+    min-width: 150px;
+}
+
+.container .nav button {
+    margin-bottom: 0.5rem;
+    background-color: #ECF0F3;
+    color: black;
+}
+
+.container .tab-content {
+    border-left: solid #dddddd 1px;
+}
+
+.caution {
+    border-left: solid #FFE083 5px;
+    background-color: #fff;
+}
+
+.hint {
+    border-left: solid #5BC0DE 5px;
+    background-color: #fff;
+}
+
+.tab-pane .content h1 {
+    margin: 2rem 0;
+}
+
+.ketQua {
+    height: 60px;
+}
+
+form button {
+    width: 150px;
+}
+
+input,
+select {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
